@@ -14,3 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
+Route::get('/home', 'HomeController@dtVencida');
+//Route::get('/home', 'HomeController@abertos');

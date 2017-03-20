@@ -1,0 +1,140 @@
+html, body {height:100%;} 
+body {
+  margin:0; 
+  padding:0;
+ 
+
+  }
+#tudo { 
+   
+    position: relative;
+    
+    margin: 0 auto;
+    text-align: left;
+    min-height: 100%;
+    
+  }
+#rodape {
+    background: #fff;
+    width: 100%;
+    padding: 5px;
+    position: absolute;
+    bottom: 0;    
+    text-align: center;
+  }
+  #rodape p{
+    color: #000;
+ 
+  }
+#conteudo{
+  top: 10%;
+  min-height: 437px;
+}
+.lg-Background{
+  background-color: #5fba6d;
+  text-align: center;
+  color: #fff;
+
+}
+.lg-Label{
+  color: #fff;
+  font-size: 23px;
+}
+.form-signin{
+  text-align: left;
+  max-width: 400px;
+  padding: 15px;
+  margin: 0 auto;
+}
+
+
+.navbar-inverse{
+  background: #5fba6d !important;
+  font-size: 23px;  
+  border: none !important;
+}
+.navbar-right{
+  margin: 10px;
+}
+.navbar-right>li>a{
+  color: #fff !important;
+}
+.logo-menu{
+  margin: 10px;
+}
+.side-bar{
+  position: relative;
+    top: 51px;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    display: block;
+    padding: 20px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: #f5f5f5;
+    border-right: 1px solid #eee;
+}
+h1{
+  background: #428bca;
+  color: #fff !important;
+  padding: 15px;
+}
+.warning{
+  background: #f0ad4e;
+  color: #fff;
+    padding: 15px;
+}
+.danger{
+  background:#c9302c;
+}
+.placeholder{
+  text-align: center;
+ 
+}
+.atencao {
+   background: #f0ad4e;
+ border: 0px;
+ width: 100%;
+  color: #fff;
+  font-size: 60px;
+}
+
+.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:focus, .navbar-inverse .navbar-nav>.open>a:hover {
+    color: #fff;
+    background-color: #369845 !important;}
+.dropdown-menu{
+  padding: 10px !important;
+}
+
+.navbar-inverse .navbar-nav .open .dropdown-menu>li>a {
+    color: #fff !important;
+  }
+  .navbar-inverse {
+    background-color: #222;
+    border-color: #369845 !important;
+}
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+    border-color: #369845 !important;}
+.navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover {
+    background-color: #369845 !important;}
+.navbar-inverse .navbar-toggle {
+    border-color: #fff !important;}
+.dropdown-menu{
+  background: #369845 !important;
+}
+.dropdown-menu>li:hover{
+  background: #369845 !important;
+}
+.dropdown-menu>li>a:hover{
+  background: #369845 !important;
+}
+.dropdown-menu > li > a {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: normal;
+    line-height: 1.42857143;
+    color: #369845;
+    white-space: nowrap;
+}
