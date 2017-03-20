@@ -39,7 +39,7 @@ class HomeController extends Controller
         $itens3 = Item::whereDate('vencimento', '>', $currentDate)->
             whereDate('vencimento','<',$addData)->get();
         $aVencer = count($itens3);
-        
+
         $i=0;
         $produtos = Produto::all();
         foreach ($produtos as $produto){
@@ -51,7 +51,7 @@ class HomeController extends Controller
         }
 
 
-        return view('hhome',compact('result','abertos','aVencer','i'));
+        return view('hhome',compact('result','abertos','aVencer','i','produtos'));
     }
 
 }

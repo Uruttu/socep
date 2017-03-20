@@ -83,7 +83,7 @@ h1{
 .warning{
   background: #f0ad4e;
   color: #fff;
-    padding: 15px;
+    padding: 10px;
 }
 .danger{
   background:#c9302c;
@@ -97,7 +97,7 @@ h1{
  border: 0px;
  width: 100%;
   color: #fff;
-  font-size: 60px;
+  font-size: 50px;
 }
 
 .navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:focus, .navbar-inverse .navbar-nav>.open>a:hover {
