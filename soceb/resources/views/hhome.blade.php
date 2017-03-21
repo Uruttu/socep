@@ -38,23 +38,29 @@
                     <th>Nome Produto</th>
                     <th>Itens Fechado</th>
                     <th>Itens Abertos</th>
-                    <th>Itens Proximo do Vencimento</th>
+                    <th>Proximo do Vencimento</th>
                     <th>Itens Vencidos</th>
-
+                    <th>Ação</th>
                 </tr>
             </thead>
             @foreach ($produtos as $key => $produto)
-
+                @php
+                $items = \App\Item::where('situacao','like','aberto')->where('produtos_id','=',$produto->id)->get();
+                $items2 = \App\Item::where('situacao','like','fechado')->where('produtos_id','=',$produto->id)->get();
+                $items3 = \App\Item::where('vencimento', '<', $currentDate)->where('produtos_id','=',$produto->id)->get();
+                $items4 = \App\Item::where('vencimento', '>', $currentDate)->where('produtos_id','=',$produto->id)->
+                            whereDate('vencimento','<',$addData)->get();
+                $count = count($items); $count2 = count($items2); $count4 = count($items4); $count3 = count($items3);
+                @endphp
                 <tr>
-                    <td>{{ ++$i }}</td>
                     <td>{{ $produto->nome }}</td>
-                    <td>{{ $produto->principioAtivo }}</td>
-                    <td>{{ $produto->apresentacao }}</td>
-                    <td>{{ $produto->conservacao }}</td>
+                    <td>{{ $count2  }}</td>
+                    <td>{{ $count }}</td>
+                    <td>{{ $count4 }}</td>
+                    <td>{{ $count3 }}</td>
                     <td>
-                        <a class="btn btn-info" href="{{route('produto.show', $produto->id)}}">Show</a>
-                        <a class="btn btn-primary" href="{{route('produto.edit', $produto->id)}}">Edit</a>
-                        {!! Form::open(['method' => 'DELETE','route' => ['produto.destroy', $produto->id],'style'=>'display:inline']) !!}
+                        <a class="btn btn-primary" href="#">Edit</a>
+                        {!! Form::open(['method' => 'DELETE','style'=>'display:inline']) !!}
                         {!! Form::submit('Delete', ['class' => 'btn btn-danger']) !!}
                         {!! Form::close() !!}
 
@@ -62,6 +68,10 @@
                 </tr>
             @endforeach
         </table>
+
+        <div class="row" style="margin: 0 auto; width: 25%;">
+            {!! $produtos->render() !!}
+        </div>
     </div>
 
 @endsection

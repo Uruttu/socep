@@ -82,16 +82,13 @@
         <div class="col-md-2 ">
             <ul class="nav nav-sidebar ">
                 <h1>Produtos</h1>
-
                 <li><a href="?produto">Novo Produto</a></li>
-
+                <li><a href="?buscarproduto">Novo Item</a></li>
                 <li><a href="?buscarproduto">Buscar Produto</a></li>
             </ul>
             <ul class="nav nav-sidebar">
                 <h1>Usuários</h1>
-
                 <li><a href="?usuario">Novo Usuário</a></li>
-
                 <li><a href="?buscarusuario">Buscar Usuário</a></li>
             </ul>
             <ul class="nav nav-sidebar">
